@@ -7,3 +7,4 @@ https://www.intel.com/content/www/us/en/products/sku/205073/intel-nuc-11-perform
 
 https://github.com/hku-mars/loam_livox
 
+sudo make install
