@@ -9,6 +9,9 @@ https://www.intel.com/content/www/us/en/products/sku/205073/intel-nuc-11-perform
 # Following this GitHub and modifing as needed
 https://github.com/hku-mars/loam_livox
 
+# ROS Melodic
+https://varhowto.com/install-ros-melodic-ubuntu-18-04/
+
 # Installed Nvidia drivers
 sudo gedit /etc/default/grub
 sudo update-grub2
@@ -21,6 +24,7 @@ curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE
 sudo apt update
 sudo apt install ros-melodic-desktop-full
 sudo apt update && sudo apt upgrade
+source /opt/ros/melodic/setup.bash
 
 # Install Curl
 sudo apt install curl
@@ -40,3 +44,19 @@ cmake ../ceres-solver-2.1.0
 make -j3
 make test
 sudo make install
+
+# Install PCL
+sudo apt install libpcl-dev
+
+# Install Git
+sudo apt install git
+
+# Clone Repository
+sudo mkdir catkin_ws
+sudo mkdir catkin_ws/src
+cd catkin_ws/src
+sudo git clone https://github.com/hku-mars/loam_livox.git
+cd ../
+
+sudo apt-get install python-catkin-tools
+catkin_make*
