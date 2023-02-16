@@ -1,28 +1,28 @@
 # Senior-Design
 Autonomous Navigation using LiDAR and Agile X Robotics
 
-### These are the links to the products that are being utilized
-https://www.livoxtech.com/hap
-https://global.agilex.ai/products/scout-mini
-https://www.intel.com/content/www/us/en/products/sku/205073/intel-nuc-11-performance-kit-nuc11pahi7/specifications.html
+#### Product Links
+[Livox HAP LiDAR](https://www.livoxtech.com/hap)
+[Agile X Scout Mini](https://global.agilex.ai/products/scout-mini)
+[Intel NUC](https://www.intel.com/content/www/us/en/products/sku/205073/intel-nuc-11-performance-kit-nuc11pahi7/specifications.html)
 
-### Following these GitHubs and modifing as needed
+#### Following these GitHubs and modifing as needed
 https://github.com/hku-mars/loam_livox
 https://github.com/Livox-SDK/livox_ros_driver
 
-### ROS Melodic
+#### ROS Melodic
 https://varhowto.com/install-ros-melodic-ubuntu-18-04/
 
-### Installed Nvidia drivers
+#### Installed Nvidia drivers for Ubuntu
 ```
 sudo gedit /etc/default/grub
 sudo update-grub2
 sudo apt install nvidia-driver-515 nvidia-dkms-515
 ```
 
-# Prerequisite Set Up
+## Prerequisite Set Up
 
-## Install ROS Melodic
+### Install ROS Melodic
 [see 1 in help.md]
 ```
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu bionic main" > /etc/apt/sources.list.d/ros-melodic.list'
@@ -34,13 +34,13 @@ sudo apt update && sudo apt upgrade
 source /opt/ros/melodic/setup.bash
 ```
 
-## Install Curl
+### Install Curl
 ```
 sudo apt install curl
 curl --version
 ```
 
-## Install cmake
+### Install cmake
 Following http://ceres-solver.org/installation.html
 ```
 sudo apt-get install cmake
@@ -58,18 +58,18 @@ make test
 sudo make install
 ```
 
-## Install PCL
+### Install PCL
 Following https://pointclouds.org/downloads/
 ```
 sudo apt install libpcl-dev
 ```
 
-## Install Git
+### Install Git
 ```
 sudo apt install git
 ```
 
-## Clone Repository and Setup Catkin
+### Clone Repository and Setup Catkin
 [see 2 in help.md]
 ```
 mkdir catkin_ws
@@ -83,6 +83,6 @@ catkin_make
 source ~/catkin_ws/devel/setup.bash
 ```
 
-## Install Lidar Drivers
+### Install Lidar Drivers
 
-# Building and Run
+## Building and Run
