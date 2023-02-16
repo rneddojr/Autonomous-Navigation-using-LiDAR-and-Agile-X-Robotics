@@ -25,7 +25,7 @@ sudo apt install nvidia-driver-515 nvidia-dkms-515
 
 ## Prerequisite Set Up
 
-### Install ROS Melodic [1]
+### Install ROS Melodic _[1]
 ```
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu bionic main" > /etc/apt/sources.list.d/ros-melodic.list'
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
@@ -42,7 +42,7 @@ sudo apt install curl
 curl --version
 ```
 
-### Install cmake [2]
+### Install cmake _[2]
 ```
 sudo apt-get install cmake
 sudo apt-get install libgoogle-glog-dev libgflags-dev
@@ -59,7 +59,7 @@ make test
 sudo make install
 ```
 
-### Install PCL
+### Install PCL _[3]
 ```
 sudo apt install libpcl-dev
 ```
@@ -69,7 +69,7 @@ sudo apt install libpcl-dev
 sudo apt install git
 ```
 
-### Clone Repository and Setup Catkin [4]
+### Clone Repository and Setup Catkin _[4]
 ```
 mkdir catkin_ws
 mkdir catkin_ws/src
