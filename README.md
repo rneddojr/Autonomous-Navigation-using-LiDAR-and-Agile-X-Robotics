@@ -114,7 +114,7 @@ param is brodcast code concatnated with launch code
 ```
 roslaunch livox_ros_driver [launch file] [param]
 ```
-EX
+EX, For more commands and usage see [Livox_SDK Github](https://github.com/Livox-SDK/Livox-SDK)
 ```
 roslaunch livox_ros_driver livox_lidar_rviz.launch bd_list:="0TFDG3B006H2Z11&1HDDG8M00100191"
 ```
