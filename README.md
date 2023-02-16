@@ -7,7 +7,7 @@ Autonomous Navigation using LiDAR and Agile X Robotics
 [Intel NUC](https://www.intel.com/content/www/us/en/products/sku/205073/intel-nuc-11-performance-kit-nuc11pahi7/specifications.html)
 
 #### Following these GitHubs and modifing as needed
-https://github.com/hku-mars/loam_livox
+https://github.com/hku-mars/loam_livox  
 https://github.com/Livox-SDK/livox_ros_driver
 
 #### Assisting Links
