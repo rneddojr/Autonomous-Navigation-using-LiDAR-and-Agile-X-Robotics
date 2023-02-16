@@ -2,8 +2,8 @@
 Autonomous Navigation using LiDAR and Agile X Robotics
 
 #### Product Links
-[Livox HAP LiDAR](https://www.livoxtech.com/hap)
-[Agile X Scout Mini](https://global.agilex.ai/products/scout-mini)
+[Livox HAP LiDAR](https://www.livoxtech.com/hap)  
+[Agile X Scout Mini](https://global.agilex.ai/products/scout-mini)  
 [Intel NUC](https://www.intel.com/content/www/us/en/products/sku/205073/intel-nuc-11-performance-kit-nuc11pahi7/specifications.html)
 
 #### Following these GitHubs and modifing as needed
