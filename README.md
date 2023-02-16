@@ -4,11 +4,13 @@ Autonomous Navigation using LiDAR and Agile X Robotics
 #### Product Links
 [Livox HAP LiDAR](https://www.livoxtech.com/hap)  
 [Agile X Scout Mini](https://global.agilex.ai/products/scout-mini)  
-[Intel NUC](https://www.intel.com/content/www/us/en/products/sku/205073/intel-nuc-11-performance-kit-nuc11pahi7/specifications.html)
+[Intel NUC](https://www.intel.com/content/www/us/en/products/sku/205073/intel-nuc-11-performance-kit-nuc11pahi7/specifications.html)  
 
 #### Following these GitHubs and modifing as needed
 https://github.com/hku-mars/loam_livox  
-https://github.com/Livox-SDK/livox_ros_driver
+https://github.com/Livox-SDK/livox_ros_driver  
+https://github.com/Livox-SDK/Livox-SDK  
+  Use 4.3+ to Connect Lidar  
 
 #### Assisting Links
 [[1] Install ROS Melodic](https://varhowto.com/install-ros-melodic-ubuntu-18-04/)  
@@ -80,8 +82,25 @@ source /opt/ros/melodic/setup.bash
 sudo apt-get install python-catkin-tools
 catkin_make
 source ~/catkin_ws/devel/setup.bash
+sudo apt update
+sudo apt autoremove
+```
+
+### Install C++11 Compilier
+```
+sudo apt install build-essential
+```
+
+### Install Livox SDK 
+```
+git clone https://github.com/Livox-SDK/Livox-SDK.git
+cd Livox-SDK
+cd build && cmake ..
+make
+sudo make install
 ```
 
 ### Install Lidar Drivers
+
 
 ## Building and Run
