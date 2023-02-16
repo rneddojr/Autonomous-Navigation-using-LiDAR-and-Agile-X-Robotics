@@ -101,6 +101,20 @@ sudo make install
 ```
 
 ### Install Lidar Drivers
+```
+git clone https://github.com/Livox-SDK/livox_ros_driver.git ws_livox/src
+cd ws_livox
+catkin_make
+source ./devel/setup.sh
+```
 
-
-## Building and Run
+### Running LivoxDriver
+see config file in **ws_livox/src/livox_ros_driver/config**
+param is brodcast code concatnated with launch code
+```
+roslaunch livox_ros_driver [launch file] [param]
+```
+EX
+```
+roslaunch livox_ros_driver livox_lidar_rviz.launch bd_list:="0TFDG3B006H2Z11&1HDDG8M00100191"
+```
