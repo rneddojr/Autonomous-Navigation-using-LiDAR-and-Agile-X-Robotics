@@ -10,8 +10,9 @@ Autonomous Navigation using LiDAR and Agile X Robotics
 https://github.com/hku-mars/loam_livox
 https://github.com/Livox-SDK/livox_ros_driver
 
-#### ROS Melodic
-https://varhowto.com/install-ros-melodic-ubuntu-18-04/
+#### Assisting Links
+[Install ROS Melodic [1]](https://varhowto.com/install-ros-melodic-ubuntu-18-04/)  
+[Setting up Catkin [2]](https://wiki.nps.edu/display/RC/Setting+up+a+ROS+package+from+Git)  
 
 #### Installed Nvidia drivers for Ubuntu
 ```
