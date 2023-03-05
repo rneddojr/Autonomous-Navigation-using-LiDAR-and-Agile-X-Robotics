@@ -116,6 +116,10 @@ roslaunch livox_ros_driver [launch file] [param]
 ```
 EX, For more commands and usage see [Livox_SDK Github](https://github.com/Livox-SDK/Livox-SDK)
 ```
-roslaunch livox_ros_driver livox_lidar_rviz.launch bd_list:="0TFDG3B006H2Z11&1HDDG8M00100191"
+roslaunch livox_ros_driver livox_lidar_rviz.launch bd_list:="5CWD227EA1001F"
 ```
 serial 5CWD227EA1001F
+https://github.com/Livox-SDK/Livox-SDK2
+https://github.com/Livox-SDK/Livox-SDK2/wiki/Livox-SDK-Communication-Protocol-HAP(English)
+https://github.com/Livox-SDK/livox_ros_driver2
+https://terra-1-g.djicdn.com/65c028cd298f4669a7f0e40e50ba1131/Livox%20HAP%20(TX)%20User%20Manual.pdf
