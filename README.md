@@ -123,3 +123,5 @@ https://github.com/Livox-SDK/Livox-SDK2
 https://github.com/Livox-SDK/Livox-SDK2/wiki/Livox-SDK-Communication-Protocol-HAP(English)
 https://github.com/Livox-SDK/livox_ros_driver2
 https://terra-1-g.djicdn.com/65c028cd298f4669a7f0e40e50ba1131/Livox%20HAP%20(TX)%20User%20Manual.pdf
+
+sudo ifconfig xxxxxx 192.168.1.50
