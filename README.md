@@ -13,10 +13,11 @@ https://github.com/Livox-SDK/Livox-SDK
   Use 4.3+ to Connect Lidar  
 
 #### Assisting Links
-[[1] Install ROS Melodic](https://varhowto.com/install-ros-melodic-ubuntu-18-04/)  
+[[1] Install ROS Noetic](https://wiki.ros.org/noetic/Installation/Ubuntu)  
 [[2] Install CMake](http://ceres-solver.org/installation.html)  
 [[3] Install PCL](https://pointclouds.org/downloads/)  
 [[4] Setting up Catkin](https://wiki.nps.edu/display/RC/Setting+up+a+ROS+package+from+Git)  
+[[5] Livox 2 Driver Install](https://github.com/Livox-SDK/livox_ros_driver2)
 
 #### Installed Nvidia drivers for Ubuntu
 ```
@@ -24,6 +25,8 @@ sudo gedit /etc/default/grub
 sudo update-grub2
 sudo apt install nvidia-driver-515 nvidia-dkms-515
 ```
+
+# From Here skip to bottom
 
 ## Prerequisite Set Up
 
@@ -124,4 +127,34 @@ https://github.com/Livox-SDK/Livox-SDK2/wiki/Livox-SDK-Communication-Protocol-HA
 https://github.com/Livox-SDK/livox_ros_driver2
 https://terra-1-g.djicdn.com/65c028cd298f4669a7f0e40e50ba1131/Livox%20HAP%20(TX)%20User%20Manual.pdf
 
+## Install Ubuntu 20.04
+### Install ROS Noetic <sub>[1]</sub>
+```
+#### Configure Repositiories
+https://help.ubuntu.com/community/Repositories/Ubuntu
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt install curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+sudo apt update
+sudo apt install ros-noetic-desktop-full
+source /opt/ros/noetic/setup.bash #Run When Using ROS
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+sudo apt install python3-rosdep
+sudo rosdep init
+rosdep update
+https://wiki.ros.org/ROS/Tutorials # Testing Ros Install
+http://wiki.ros.org/ROS/Installation/TwoLineInstall/ #Use if not installing 
+```
+
+### Download Livox ROS Driver 2
+```
+Be sure to clone the source code in a '[work_space]/src/' folder (as shown above), otherwise compilation errors will occur due to the compilation tool restriction.
+git clone https://github.com/Livox-SDK/livox_ros_driver2.git ws_livox/src/livox_ros_driver2
+source /opt/ros/noetic/setup.sh
+./build.sh ROS1
+#### Running Software, More info below
+roslaunch livox_ros_driver2 rviz_HAP.launch <sub>[5]</sub>
+or 
+ros2 launch livox_ros_driver2 rviz_HAP_launch.py
+```
 sudo ifconfig xxxxxx 192.168.1.50
