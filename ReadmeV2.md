@@ -94,9 +94,17 @@ cd build
 sudo cmake install
 ```
 
-### Install ROS2 Drivers <sub>[6]</sub>
+### Install ROS Drivers <sub>[6]</sub>
 ```
-
+# Navigate to usr/src folder
+cd
+cd /usr/src
+sudo git clone https://github.com/Livox-SDK/livox_ros_driver2.git ws_livox/src/livox_ros_driver2
+wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install python3-catkin-tools
+source /opt/ros/noetic/setup.sh
+./build.sh ROS1
 ```
 
 ## Run Livox2 
