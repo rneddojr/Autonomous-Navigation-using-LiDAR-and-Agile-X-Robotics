@@ -10,16 +10,16 @@ Autonomous Navigation using LiDAR and Agile X Robotics
 https://github.com/hku-mars/loam_livox  
 
 #### Assisting Links
-[[1] Configure Repositories](https://help.ubuntu.com/community/Repositories/Ubuntu)
+[[1] Configure Repositories](https://help.ubuntu.com/community/Repositories/Ubuntu)  
 [[2] Install ROS Noetic](https://wiki.ros.org/noetic/Installation/Ubuntu)  
-[[3] Testing Ros Noetic](https://wiki.ros.org/ROS/Tutorials)
-[[4] Debugging Ros Noetic Installation](http://wiki.ros.org/ROS/Installation/TwoLineInstall/)
-[[5] Livox 2 Driver Install](https://github.com/Livox-SDK/livox_ros_driver2)
-[[6] Ros Driver 2 Install](https://github.com/Livox-SDK/livox_ros_driver2)
+[[3] Testing Ros Noetic](https://wiki.ros.org/ROS/Tutorials)  
+[[4] Debugging Ros Noetic Installation](http://wiki.ros.org/ROS/Installation/TwoLineInstall/)  
+[[5] Livox 2 Driver Install](https://github.com/Livox-SDK/livox_ros_driver2)  
+[[6] Ros Driver 2 Install](https://github.com/Livox-SDK/livox_ros_driver2)  
 
 #### Additional Rescources
-[Livox SDK Communication Protocol for HAP](https://github.com/Livox-SDK/Livox-SDK2/wiki/Livox-SDK-Communication-Protocol-HAP(English))
-[Livox HAP Manual](https://terra-1-g.djicdn.com/65c028cd298f4669a7f0e40e50ba1131/Livox%20HAP%20(TX)%20User%20Manual.pdf)
+[Livox SDK Communication Protocol for HAP](https://github.com/Livox-SDK/Livox-SDK2/wiki/Livox-SDK-Communication-Protocol-HAP(English))  
+[Livox HAP Manual](https://terra-1-g.djicdn.com/65c028cd298f4669a7f0e40e50ba1131/Livox%20HAP%20(TX)%20User%20Manual.pdf)  
 
 ## From Fresh Install of Ubuntu 20.04
 
