@@ -114,3 +114,4 @@ cd /Livox-SDK2/build
 sudo ifconfig enp89s0 192.168.1.50
 cd samples/livox_lidar_quick_start && ./livox_lidar_quick_start ../../../samples/livox_lidar_quick_start/hap_config.json
 ```
+128.153.184.190
