@@ -91,7 +91,7 @@ sudo nano config_HAP.json
 # Edit IPs to 192.168.1.50 and save
 cd ../..
 cd build
-sudo cmake install
+sudo make install
 ```
 
 ### Install ROS Drivers <sub>[6]</sub>
@@ -110,7 +110,7 @@ source /opt/ros/noetic/setup.sh
 ## Run Livox2 
 ```
 cd
-cd /Livox-SDK2/
+cd /Livox-SDK2/build
 sudo ifconfig enp89s0 192.168.1.50
 cd samples/livox_lidar_quick_start && ./livox_lidar_quick_start ../../../samples/livox_lidar_quick_start/hap_config.json
 ```
