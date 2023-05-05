@@ -135,6 +135,9 @@ Replace with [livox_feature_extractor.hpp]()
 in ~/scout_ws/src/loam_livox/source/
 Replace "laser_mapping.hpp"
 Replace with [laser_mapping.hpp]()
+in ~/scout_ws/src/loam_livox/lauch/
+Replace "livox.launch"
+Replace with [livox.launch]()
 ```
 
 ## Prep for Building
