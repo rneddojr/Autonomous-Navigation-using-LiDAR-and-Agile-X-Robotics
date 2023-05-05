@@ -1,0 +1,21 @@
+<launch>
+  <!-- Generate Timestamp for .rosbag -->
+  <arg name="timestamp" default=""/>
+  
+  <!-- Scout Mini Base Launch -->
+  <include file="$(find scout_base)/launch/scout_mini_base.launch">
+    <arg name="port_name" value="can0" />
+  </include>
+
+  <!-- Livox HAP ROS driver -->
+  <include file="$(find livox_ros_driver2)/launch_ROS1/rviz_HAP.launch">
+    <arg name = "rviz_enable" value="false"/>
+  </include>
+
+  <!-- LOAM Livox -->
+  <include file="$(find loam_livox)/launch/livox.launch"/>
+
+  <node name="rosbag_record" pkg="rosbag" type="record" args="-O /home/camel-aax/Desktop/RosBags/my_lidar_data_$(arg timestamp).bag /livox/lidar /laser_odom_to_init /aft_mapped_to_init /laser_cloud_surround">
+    <param name="filename" value="/home/camel-aax/Desktop/RosBags/my_lidar_data_$(arg timestamp).bag" />
+  </node>
+</launch>
