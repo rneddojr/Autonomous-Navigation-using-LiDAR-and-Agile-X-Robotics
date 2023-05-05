@@ -16,14 +16,11 @@ https://github.com/agilexrobotics/ugv_sdk
 
 #### Assisting Links
 [[1] Install ROS Noetic](https://wiki.ros.org/noetic/Installation/Ubuntu)  
+[[1.5]Testing ROS Install](https://wiki.ros.org/ROS/Tutorials)  
 [[2] Install CMake](http://ceres-solver.org/installation.html)  
 [[3] Install PCL](https://pointclouds.org/downloads/)  
 [[4] Setting up Catkin](https://wiki.nps.edu/display/RC/Setting+up+a+ROS+package+from+Git)  
-[[5] Livox 2 Driver Install](https://github.com/Livox-SDK/livox_ros_driver2)
-https://wiki.ros.org/ROS/Tutorials # Testing Ros Install  
-http://wiki.ros.org/ROS/Installation/TwoLineInstall/ #Use if not installing  
-https://help.ubuntu.com/community/Repositories/Ubuntu  
-https://github.com/Livox-SDK/Livox-SDK2/wiki/Livox-SDK-Communication-Protocol-HAP(English)  
+[[5] Livox HAP Communication Protocol](https://github.com/Livox-SDK/Livox-SDK2/wiki/Livox-SDK-Communication-Protocol-HAP(English))  
 
 #### Installed Nvidia drivers for Ubuntu 20.04 LTS
 ```
@@ -38,7 +35,6 @@ sudo apt-get update
 sudo apt-get install build-essential git cmake libasio-dev
 sudo apt install curl
 sudo apt update
-
 ```
 
 ## Install ROS Noetic
@@ -105,40 +101,42 @@ source ~/scout_ws/devel/setup.bash
 ```
 
 ## Replace and Make Files
+
+### Make Timestamp Script
 ```
 in ~/scout_ws/
-Create a file "create_timestamp.py"
-Copy from [create_timestamp.py]()
 ```
+Copy and paste "create_timestamp.py" from [create_timestamp.py]()  
 
+### Make Launch File
 ```
-Replace camel-aax as needed with your username
+Replace camel-aax as needed with your username in [scout_mini_SLAM.launch]()
 in ~/scout_ws/src/scout_ros/scout_bringup/launch/
-Create a "file scout_mini_SLAM.launch"
-Copy from [scout_mini_SLAM.launch]()
 ```
+Copy and paste "scout_mini_SLAM.launch" from [scout_mini_SLAM.launch]()  
 
+### Replace HAP Config Files
 ```
 in ~/scout_ws/src/livox_ros_driver2/config/
-Replace "HAP_config.json"
-Replace with [HAP_config.json]()
-in ~/scout_ws/src/livox_ros_driver2/launch_ROS1/
-Replace "rviz_HAP.launch"
-Replace Broadcast code in "<arg name="bd_list" default="5CWD227EA1001F1"/>" as needed with your code "5CWD227EA1001F1"
-Replace with [rviz_HAP.launch]()
 ```
+Replace "HAP_config.json" with [HAP_config.json]()  
 
 ```
-in ~/scout_ws/src/loam_livox/source/
-Replace "livox_feature_extractor.hpp"
-Replace with [livox_feature_extractor.hpp]()
-in ~/scout_ws/src/loam_livox/source/
-Replace "laser_mapping.hpp"
-Replace with [laser_mapping.hpp]()
-in ~/scout_ws/src/loam_livox/lauch/
-Replace "livox.launch"
-Replace with [livox.launch]()
+in ~/scout_ws/src/livox_ros_driver2/launch_ROS1/
+Replace Broadcast Code on line 4 -> "<arg name="bd_list" default="5CWD227EA1001F1"/>" as needed with your Broadcast Code"
 ```
+Replace "rviz_HAP.launch" with [rviz_HAP.launch]()  
+
+### Replace Loam Livox Files
+```
+in ~/scout_ws/src/loam_livox/source/
+```
+Replace "livox_feature_extractor.hpp" with [livox_feature_extractor.hpp]()  
+Replace "laser_mapping.hpp" with [laser_mapping.hpp]()  
+```
+in ~/scout_ws/src/loam_livox/lauch/
+```
+Replace "livox.launch" with [livox.launch]()
 
 ## Prep for Building
 ```
