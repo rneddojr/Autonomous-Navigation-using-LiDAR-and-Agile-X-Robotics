@@ -106,37 +106,37 @@ source ~/scout_ws/devel/setup.bash
 ```
 in ~/scout_ws/
 ```
-Copy and paste "create_timestamp.py" from [create_timestamp.py]()  
+Copy and paste "create_timestamp.py" from [create_timestamp.py](https://github.com/rneddojr/Senior-Design/blob/e2a79f152e29b8d243bf4a20a389bbf67025c939/Modified%20Files/scout_ws/generate_timestamp.py)  
 
 ### Make Launch File
 ```
 Replace camel-aax as needed with your username in [scout_mini_SLAM.launch]()
 in ~/scout_ws/src/scout_ros/scout_bringup/launch/
 ```
-Copy and paste "scout_mini_SLAM.launch" from [scout_mini_SLAM.launch]()  
+Copy and paste "scout_mini_SLAM.launch" from [scout_mini_SLAM.launch](https://github.com/rneddojr/Senior-Design/blob/e2a79f152e29b8d243bf4a20a389bbf67025c939/Modified%20Files/scout_ros/scout_mini_SLAM.launch)  
 
-### Replace HAP Config Files
+### Replace HAP Config Files in livox_ros_driver2
 ```
 in ~/scout_ws/src/livox_ros_driver2/config/
 ```
-Replace "HAP_config.json" with [HAP_config.json]()  
+Replace "HAP_config.json" with [HAP_config.json](https://github.com/rneddojr/Senior-Design/blob/e2a79f152e29b8d243bf4a20a389bbf67025c939/Modified%20Files/livox_ros_driver2/HAP_config.json)  
 
 ```
 in ~/scout_ws/src/livox_ros_driver2/launch_ROS1/
 Replace Broadcast Code on line 4 -> "<arg name="bd_list" default="5CWD227EA1001F1"/>" as needed with your Broadcast Code"
 ```
-Replace "rviz_HAP.launch" with [rviz_HAP.launch]()  
+Replace "rviz_HAP.launch" with [rviz_HAP.launch](https://github.com/rneddojr/Senior-Design/blob/e2a79f152e29b8d243bf4a20a389bbf67025c939/Modified%20Files/livox_ros_driver2/rviz_HAP.launch)  
 
 ### Replace Loam Livox Files
 ```
 in ~/scout_ws/src/loam_livox/source/
 ```
-Replace "livox_feature_extractor.hpp" with [livox_feature_extractor.hpp]()  
-Replace "laser_mapping.hpp" with [laser_mapping.hpp]()  
+Replace "livox_feature_extractor.hpp" with [livox_feature_extractor.hpp](https://github.com/rneddojr/Senior-Design/blob/7aa66395e12f355f1e93b3b16e21ab42f7f850e7/Modified%20Files/loam_livox/livox_feature_extractor.hpp)  
+Replace "laser_mapping.hpp" with [laser_mapping.hpp](https://github.com/rneddojr/Senior-Design/blob/7aa66395e12f355f1e93b3b16e21ab42f7f850e7/Modified%20Files/loam_livox/laser_mapping.hpp)  
 ```
 in ~/scout_ws/src/loam_livox/lauch/
 ```
-Replace "livox.launch" with [livox.launch]()
+Replace "livox.launch" with [livox.launch](https://github.com/rneddojr/Senior-Design/blob/7aa66395e12f355f1e93b3b16e21ab42f7f850e7/Modified%20Files/loam_livox/livox.launch)
 
 ## Prep for Building
 ```
