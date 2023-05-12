@@ -1,5 +1,4 @@
-# Senior-Design
-Autonomous Navigation using LiDAR and Agile X Robotics
+# Autonomous Navigation using LiDAR and Agile X Robotics
 
 #### Product Links
 [Livox HAP LiDAR](https://www.livoxtech.com/hap)  
