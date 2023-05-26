@@ -137,7 +137,7 @@ in ~/scout_ws/src/loam_livox/lauch/
 ```
 Replace "livox.launch" with [livox.launch](https://github.com/rneddojr/Senior-Design/blob/7aa66395e12f355f1e93b3b16e21ab42f7f850e7/Modified%20Files/loam_livox/livox.launch)
 
-## Prep for Building
+## Prep for Building and Running
 ```
 cd
 cd Desktop
