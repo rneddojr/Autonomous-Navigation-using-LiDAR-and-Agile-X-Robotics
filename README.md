@@ -20,6 +20,7 @@ https://github.com/agilexrobotics/ugv_sdk
 [[3] Install PCL](https://pointclouds.org/downloads/)  
 [[4] Setting up Catkin](https://wiki.nps.edu/display/RC/Setting+up+a+ROS+package+from+Git)  
 [[5] Livox HAP Communication Protocol](https://github.com/Livox-SDK/Livox-SDK2/wiki/Livox-SDK-Communication-Protocol-HAP(English))  
+[[6]] Agile X Scout Mini Manual (https://agilexrobotics.gitbook.io/scout-mini/)  
 
 #### Installed Nvidia drivers for Ubuntu 20.04 LTS
 ```
