@@ -161,7 +161,7 @@ roscore
 ```
 In terminal 2
 in ~/scout_ws/
-roslaunch scout_bringup scout_mini_SLAM.launch timestamp:=$(python3 generate_timestamp.py)
+roslaunch scout_bringup scout_mini_SLAM.launch timestamp:=$(python3 generate_timestamp.py) can_commad:=$(python3 can_command.py)
 ```
 
 ```
