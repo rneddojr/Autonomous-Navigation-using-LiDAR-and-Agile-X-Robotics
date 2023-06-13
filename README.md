@@ -173,3 +173,26 @@ killall roscore #Stops ROS
 In terminal 4
 cansend
 ```
+
+## Running ROS and Playing Rosbags
+```
+In terminal 1
+in ~/scout_ws/
+roscore
+```
+
+```
+In terminal 2
+in ~/scout_ws/
+rosrun rviz rviz
+```
+
+select config with file --> open 
+```
+config/recent/display_point_cloud
+```
+
+```
+In terminal 3
+rosbag play "/path to file/rosbag.bag"
+```
