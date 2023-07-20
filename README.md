@@ -12,6 +12,7 @@ https://github.com/Livox-SDK/livox_ros_driver2
 https://github.com/Livox-SDK/Livox-SDK2  
 https://github.com/agilexrobotics/scout_ros  
 https://github.com/agilexrobotics/ugv_sdk  
+https://github.com/Livox-SDK/LIO-Livox
 
 #### Assisting Links
 [[1] Install ROS Noetic](https://wiki.ros.org/noetic/Installation/Ubuntu)  
@@ -99,6 +100,15 @@ cd ..
 catkin_make
 source ~/scout_ws/devel/setup.bash
 ```
+
+###Download LIO-Livox
+'''
+cd ~/scout_ws/src
+git clone https://github.com/Livox-SDK/LIO-Livox
+cd..
+catkin_make
+source ~/scout_ws/devel/setup.bash
+'''
 
 ## Replace and Make Files
 
