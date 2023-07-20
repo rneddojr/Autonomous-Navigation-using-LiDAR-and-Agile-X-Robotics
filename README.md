@@ -102,13 +102,13 @@ source ~/scout_ws/devel/setup.bash
 ```
 
 ### Download LIO-Livox
-'''
+```
 cd ~/scout_ws/src
 git clone https://github.com/Livox-SDK/LIO-Livox
 cd ..
 catkin_make
 source ~/scout_ws/devel/setup.bash
-'''
+```
 
 ## Replace and Make Files
 
