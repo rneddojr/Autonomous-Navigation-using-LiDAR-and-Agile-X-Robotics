@@ -4,7 +4,7 @@
 The purpose of this project is to develop an autonomous navigation robot that utilizes a LiDAR (Light Detection and Ranging) sensor for environmental perception. The robot will be capable of exploring and navigating its surroundings while avoiding obstacles and reaching its designated target locations.
 
 <p align="center">
-<img src="https://github.com/hovliu7/Autonomous-Navigation-using-LiDAR-and-Agile-X-Robotics/assets/113165390/99fd96ef-8f15-4ae4-8352-bb2b6d710298" width="300" height=auto>
+<img src="https://github.com/rneddojr/Autonomous-Navigation-using-LiDAR-and-Agile-X-Robotics/assets/113165390/52b3672d-a59e-4561-8bfa-e29971517301" width="300" height=auto>
 </p>
 
 ### Main Objectives
