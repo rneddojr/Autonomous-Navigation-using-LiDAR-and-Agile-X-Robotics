@@ -1,5 +1,22 @@
 # Autonomous Navigation using LiDAR and Agile X Robotics
 
+### Project Overview
+The purpose of this project is to develop an autonomous navigation robot that utilizes a LiDAR (Light Detection and Ranging) sensor for environmental perception. The robot will be capable of exploring and navigating its surroundings while avoiding obstacles and reaching its designated target locations.
+
+<p align="center">
+<img src="https://github.com/hovliu7/Autonomous-Navigation-using-LiDAR-and-Agile-X-Robotics/assets/113165390/99fd96ef-8f15-4ae4-8352-bb2b6d710298" width="300" height=auto>
+</p>
+
+### Main Objectives
+- Build a robot platform capable of autonomous movement
+- Integrate a Livox HAP LiDAR sensor for accurate environmental perception
+- Implement algorithms for obstacle detection, localization, mapping, and path planning
+
+#### Components Used
+- Agile X Scout Mini
+- Livox HAP LiDAR
+- Intel NUC
+
 #### Product Links
 [Livox HAP LiDAR](https://www.livoxtech.com/hap)  
 [Livox HAP Manual](https://terra-1-g.djicdn.com/65c028cd298f4669a7f0e40e50ba1131/Livox%20HAP%20(TX)%20User%20Manual.pdf)  
@@ -110,6 +127,11 @@ catkin_make
 source ~/scout_ws/devel/setup.bash
 ```
 
+### Download Livox Viewer 2
+https://www.livoxtech.com/downloads
+
+**Note:** Livox Viewer 2 should be used for sensor calibration, not recording or playback.
+
 ## Replace and Make Files
 
 ### Make Timestamp Script
@@ -154,14 +176,51 @@ cd
 cd Desktop
 mkdir RosBags
 sudo ifconfig enp89s0 192.168.1.50 #Sets IP Address of LiDAR to Ethernet
-can ifconfig #Sets CAN IP
-cansend #Enables CAN communication
 cd ~/scout_ws/
 catkin_make
 source devel/setup.bash
 ```
+## Debugging LiDAR Sensor Ethernet Connection
+- Ensure you've ran ```sudo ifconfig enp89s0 192.168.1.50```
+- Ensure Scout Mini is turned on
+- Disconnect and reconnect Ethernet cable
+- Reinstall network drivers ```sudo apt-get install --reinstall network-manager```
 
-## Running ROS and Launch File
+## CAN Communication Protocol
+### Sending CAN Commands
+```
+In terminal 1
+sudo modprobe gs_usb #Enable gs_usb kernel module
+rosrun scout_bringup bringup_can2usb.bash
+candump can0 #Receive feedback from scout
+```
+
+```
+In terminal 2
+roslaunch scout_bringup scout_mini_robot_base.launch #Start base node for scout
+```
+
+```
+In terminal 3
+cansend can0 XXX#XXXXXXXXXXXXXXXX #Send CAN command
+sudo ip link set can0 down #Terminate CAN communication
+```
+**Note:** Follow the CAN protocol specified in the Scout Mini Manual. There is a typo in the manual for the Lighting Control Frame. For byte[1], 0x00 turns the light off, 0x01 turns the light on.
+
+### CAN Command Examples
+```
+cansend can0 121#0101000000000000 #Turn front light on
+cansend can0 111#0253000000000000 #Move forward at speed 0x0253, or 595
+```
+### CAN Command Demos
+[Command Line Demo](https://drive.google.com/file/d/1JWojCHcbzEAMnAI4b12Tmhp2bgChU7Zl/view?usp=sharing)
+
+[Light Control Demo](https://drive.google.com/file/d/1s4NVZNYDPPRmtYOqYJhTozvBBnVOqBCM/view?usp=drive_link)
+
+[Motion Control Demo](https://drive.google.com/file/d/11IXTkided4yueLuCGPYPKCNaQgbwu8Y1/view?usp=sharing)
+
+
+## Running ROS and Launch File for Recording with RViz
 ```
 In terminal 1
 in ~/scout_ws/
@@ -171,7 +230,7 @@ roscore
 ```
 In terminal 2
 in ~/scout_ws/
-roslaunch scout_bringup scout_mini_SLAM.launch timestamp:=$(python3 generate_timestamp.py) can_command:=$(python3 can_command.py)
+roslaunch scout_bringup scout_mini_SLAM.launch timestamp:=$(python3 generate_timestamp.py)
 ```
 
 ```
@@ -184,7 +243,7 @@ In terminal 4
 cansend
 ```
 
-## Running ROS and Playing Rosbags
+## Running ROS and Playing Rosbags with RViz
 ```
 In terminal 1
 in ~/scout_ws/
@@ -206,3 +265,8 @@ config/recent/display_point_cloud
 In terminal 3
 rosbag play "/path to file/rosbag.bag"
 ```
+
+## Next Steps
+- Experiment with Livox Viewer 2 for sensor calibration. We want to ensure that the sensor is calibrated before recording and processing data.
+- Implement SLAM (Simultaneous Localization and Mapping) using LOAM Livox or LIO Livox. LIO Livox is inherently supports the HAP Sensor.
+- Implement real-time navigation using a combination of SLAM and CAN commands.
