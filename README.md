@@ -213,11 +213,9 @@ cansend can0 121#0101000000000000 #Turn front light on
 cansend can0 111#0253000000000000 #Move forward at speed 0x0253, or 595
 ```
 ### CAN Command Demos
-[Command Line Demo](https://drive.google.com/file/d/1JWojCHcbzEAMnAI4b12Tmhp2bgChU7Zl/view?usp=sharing)
-
-[Light Control Demo](https://drive.google.com/file/d/1s4NVZNYDPPRmtYOqYJhTozvBBnVOqBCM/view?usp=drive_link)
-
-[Motion Control Demo](https://drive.google.com/file/d/11IXTkided4yueLuCGPYPKCNaQgbwu8Y1/view?usp=sharing)
+- [Command Line Demo](https://drive.google.com/file/d/1JWojCHcbzEAMnAI4b12Tmhp2bgChU7Zl/view?usp=sharing)
+- [Light Control Demo](https://drive.google.com/file/d/1s4NVZNYDPPRmtYOqYJhTozvBBnVOqBCM/view?usp=drive_link)
+- [Motion Control Demo](https://drive.google.com/file/d/11IXTkided4yueLuCGPYPKCNaQgbwu8Y1/view?usp=sharing)
 
 
 ## Running ROS and Launch File for Recording with RViz
